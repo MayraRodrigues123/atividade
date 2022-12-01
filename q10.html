@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Transformação de unidades</title>
+  <link rel="stylesheet" type="text/css" href="calculadora.css">
+
+</head>
+
+<body>
+  <h1><span class="styling"><br><br>TRANSFORMAÇÃO DE UNIDADES</span></h1>
+
+  <main>
+    <div class="app-form-group">
+      <input type="text" class="app-form-control" placeholder="Informe o valor em metros" id="valor">
+    </div></br></br>
+
+    <div>
+      <input type="button" name="" value="CALCULAR" class="app-form-button" onclick="calc()">
+    </div>
+
+    <div class="app-form-group-showdata">
+      <p id="showdata"></p>
+    </div>
+  </main>
+
+  <script>
+    const calc = () => {
+      let valor = document.getElementById('valor').value;
+      let km = parseFloat(valor)/1000;  
+      let hm = parseFloat(valor)/100; 
+      let dam = parseFloat(valor)/10;
+      let dm = parseFloat(valor)*10;
+      let cm = parseFloat(valor)*100;
+      let mm = parseFloat(valor)*1000; 
+      
+      document.getElementById('showdata').innerHTML = `<br> ${valor}m é igual a:<br><br>${km}km<br>${hm}hm<br>${dam}dam<br>${dm}dm<br>${cm}cm<br>${mm}mm<br>`
+      }
+
+  </script>
+
+</body>
+
+</html>

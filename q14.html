@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="numero"></input>
+    <button onclick="verifica()">verifica</button>
+    <script>
+        function verifica(){
+            let idade = Number(document.getElementById('numero').value);
+            if (idade >= 0 && idade <= 12){
+                alert('Criança');
+            } else if(idade >= 13 && idade <= 17){
+                alert('Adolescente');
+            } else if(idade >= 18 && idade <= 59){
+                alert('Adulto');
+            } else{
+                alert('Idoso');
+            }
+        }
+    </script>
+    
+</body>
+</html>

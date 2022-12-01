@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Triângulo Retângulo</title>
+  <link rel="stylesheet" type="text/css" href="calculadora.css">
+
+</head>
+
+<body>
+  <h1><span class="styling"><br><br>TEOREMA DE PITÁGORAS</span></h1>
+  <main>
+    <div class="app-form-group">
+      <input type="text" class="app-form-control" placeholder="1º Cateto" id="pri">
+    </div></br>
+
+    <div class="app-form-group">
+      <input type="text" class="app-form-control" placeholder="2º Cateto" id="seg">
+    </div><br>
+
+    <div>
+      <input type="button" name="" value="CALCULAR" class="app-form-button" onclick="calc()">
+    </div>
+
+    <div class="app-form-group-showdata">
+      <p id="showdata"></p>
+    </div>
+  </main>
+
+  <script>
+    const calc = () => {
+      let pri = document.getElementById('pri').value;
+      let seg = document.getElementById('seg').value;
+ 
+      let hipotenusa = Math.sqrt(parseFloat(pri)**2 + parseFloat(seg)**2)
+
+      document.getElementById('showdata').innerHTML = `<br> A HIPOTENUSA É ${hipotenusa}`
+      }
+
+  </script>
+
+</body>
+
+</html>

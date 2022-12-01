@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Polegadas</title>
+  <link rel="stylesheet" type="text/css" href="calculadora.css">
+
+</head>
+
+<body>
+  <h1><span class="styling"><br><br>POLEGADAS</span></h1>
+
+  <main>
+    <div class="app-form-group">
+      <input type="text" class="app-form-control" placeholder="Insira o valor em polegadas" id="pol">
+    </div></br>
+    <div>
+      <input type="button" name="" value="CALCULAR" class="app-form-button" onclick="calc()">
+    </div>
+
+    <div class="app-form-group-showdata">
+      <p id="showdata"></p>
+    </div>
+  </main>
+
+  <script>
+    const calc = () => {
+      let pol = document.getElementById('pol').value;
+
+      let centimetro = parseFloat(pol)*2.54
+
+      document.getElementById('showdata').innerHTML = `<br> ${pol} polegada é igua a ${centimetro}cm`
+      }
+
+  </script>
+
+</body>
+
+</html>

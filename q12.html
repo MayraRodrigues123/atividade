@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Números inteiros</title>
+</head>
+
+<body>
+	<input type="text" id="numero1"></input>
+	<input type="text" id="numero2"></input>
+	<p id="ver"></p>
+	<button onclick="verifica();">verifica</button>
+	<script>
+		function verifica() {
+			let numero1 = document.getElementById("numero1").value;
+			let numero2 = document.getElementById("numero2").value;
+			if (numero2 % numero1 === 0) {
+				alert('N é múltiplo')
+			} else {
+				alert('N não é múltiplo')
+			}
+		}
+	</script>
+</body>
+
+</html>

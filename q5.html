@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ARÉA DO TRIÂNGULO</title>
+  <link rel="stylesheet" type="text/css" href="calculadora.css">
+</head>
+
+<body>
+  <h1><span class="styling"><br><br>ARÉA DO TRIÂNGULO</span></h1>
+
+  <main>
+    <div class="app-form-group">
+      <input type="text" class="app-form-control" placeholder="INFORME A BASE" id="base">
+    </div></br>
+
+    <div class="app-form-group">
+      <input type="text" class="app-form-control" placeholder="INFORME A ALTURA" id="altura">
+    </div><br>
+
+
+    <div>
+      <input type="button" name="" value="CALCULAR" class="app-form-button" onclick="calc()">
+    </div>
+
+    <div class="app-form-group-showdata">
+      <p id="showdata"></p>
+    </div>
+  </main>
+
+  <script>
+    const calc = () => {
+      let base = document.getElementById('base').value;
+      let altura = document.getElementById('altura').value;
+
+      let area = parseFloat(base) * parseFloat(altura)/2;  
+
+  
+
+        document.getElementById('showdata').innerHTML = `<br>A base do triângulo é ${base}, a altura do triângulo é ${altura}.<br> A aréa do triângulo é: ${area}.`
+
+      }
+
+  </script>
+</body>
+</html>

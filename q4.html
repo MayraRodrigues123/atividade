@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>circunferência</title>
+	<link rel="stylesheet" type="text/css" href="calculadora.css">
+
+</head>
+
+<body>
+	<h1><span class="styling"><br><br>ÁREA E COMPRIMENTO DA CIRCUNFERÊNCIA</span></h1>
+
+	<main>
+		<div class="app-form-group">
+			<input type="text" class="app-form-control" placeholder="INFORME O RAIO DA CIRCUNFERÊNCIA" id="raio"
+				style="width: 260px;">
+		</div></br>
+		<div>
+			<input type="button" name="" value="CALCULAR" class="app-form-button" onclick="calc()">
+		</div>
+
+		<div class="app-form-group-showdata">
+			<p id="showdata"></p>
+		</div>
+	</main>
+
+	<script>
+		const calc = () => {
+			let raio = document.getElementById('raio').value;
+
+			let area = (parseFloat(raio) ** 2) * Math.PI;
+			let comprimento = (parseFloat(raio) * 2) * Math.PI
+
+			document.getElementById('showdata').innerHTML = `A CIRCUNFERÊNCIA DE RAIO ${raio} TEM:<br>ÁREA = ${area}<br>COMPRIMENTO = ${comprimento}`
+		}
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+	<!DOCTYPE html>
+	<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>replit</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<center>
+	<body>
+		 <style type="text/css">
+
+        .p {
+            background: rgb(255, 255, 255);
+            font-weight: bold;
+            width: 50%;
+            font-size: 35px;
+        }
+
+    </style>
+		<h1 style="font-size: 30px; background:rgb(169,169,169)";>Informe suas notas!</h1>
+		<p class="p" id="result"></p>
+		<script text="text/javascript">
+
+			var media, nota1, nota2, nota3;
+
+			nota1 = prompt("Informe a primeira nota: ");
+			nota1 = eval(nota1);
+
+			nota2 = prompt("Informe a segunda nota: ");
+			nota2 = eval(nota2);
+
+			nota3 = prompt("Informe a terceira nota: ");
+			nota3 = eval(nota3);
+
+			media = (nota1 + nota2 + nota3) / 3;
+
+			{
+				document.getElementById("result").innerHTML ="A sua média é: " + media;
+			}
+
+		</script>
+	</body>
+	</center>
+	</html>

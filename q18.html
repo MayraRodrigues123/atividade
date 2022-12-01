@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>QUAL É O NÚMERO MAIOR E QUAL É O NÚMERO MENOR?</title>
+   <br>
+   Primeira numero:<input id="numero1" type="number"> <br />
+   Segundo  numero:<input id="numero2" type="number"> <br />
+   Terceiro numero: <input id="numero3" type="number"> <br />
+   <button onclick="verifica()">Calcular Maior</button>
+   <script type="text/javascript">
+    function verifica(){
+        var num1 = parseFloat(document.getElementById("numero1").value);
+        var num2 = parseFloat(document.getElementById("numero2").value);
+        var num3 = parseFloat(document.getElementById("numero3").value);
+        var lista = [].concat(num1, num2, num3);
+        lista.sort(function(a,b){
+            if (a > b){
+                return 1;
+            }
+            if (a < b){
+                return -1;
+            }
+            return 0
+        });
+        alert(`Não é o maior e nem o menor: ${lista[1]}`);
+    }
+ </script>

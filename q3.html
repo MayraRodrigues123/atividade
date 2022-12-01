@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NÚMEROS INTEIROS</title>
+  <link rel="stylesheet" type="text/css" href="calculadora.css">
+</head>
+
+<body>
+  <h1><span class="styling"><br><br>NÚMEROS INTEIROS</span></h1>
+
+  <main>
+
+    <div class="app-form-group">
+      <input type="text" class="app-form-control" placeholder="Informe o número" id="num">
+    </div></br>
+
+    <div>
+      <input type="button" name="" value="CALCULAR" class="app-form-button" onclick="calc()">
+    </div>
+
+    <div class="app-form-group-showdata">
+      <p id="showdata"></p>
+    </div>
+  </main>
+
+  <script>
+    const calc = () => {
+      let num = document.getElementById('num').value;
+
+      let dobro = parseFloat(num)*2; 
+      let triplo = parseFloat(num)*3; 
+      let quadrado = parseFloat(num)**2; 
+      let cubo = parseFloat(num)**3; 
+      let raizquadrada = Math.sqrt(num); 
+
+        document.getElementById('showdata').innerHTML = `<br>O NÚMERO ${num} TEM:<br>DOBRO = ${dobro}<br>TRIPLO = ${triplo}<br>QUADRADO = ${quadrado}<br>CUBO = ${cubo}<br>RAIZ QUADRADA 
+= ${raizquadrada}`
+      }
+
+
+  </script>
+</body>
+</html>
